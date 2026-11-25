@@ -1,0 +1,126 @@
+<!--
+titel: netzfest – Gemeinsam stark im Netz
+beschreibung: Kostenlose Materialien, Spiele, Wissen und schnelle Hilfe zu Cybermobbing, Hass im Netz und Fake News – für Schüler:innen, Eltern, Lehrkräfte und Fachkräfte.
+nav: start
+jsonld: [{"@context":"https://schema.org","@type":"Organization","name":"netzfest","url":"https://www.netzfest.example/","logo":"https://www.netzfest.example/assets/img/favicon.svg"},{"@context":"https://schema.org","@type":"WebSite","name":"netzfest","url":"https://www.netzfest.example/","inLanguage":"de"}]
+-->
+<section class="hero" aria-labelledby="hero-title">
+  {{NETZ}}
+  <canvas class="hero__net" data-net aria-hidden="true"></canvas>
+  <div class="wrap hero__inner">
+    <h1 class="hero__title" id="hero-title">Gemeinsam stark im Netz.</h1>
+
+    <!-- Untertitel je Rolle (data-fuer). Ohne Rollenwahl ist „alle“ sichtbar. -->
+    <p class="hero__sub" data-fuer="alle">Materialien, Spiele und Wissen zu Cybermobbing, Hass im Netz und Fake News – passend zu Alter, Schulform und der Zeit, die du hast.</p>
+    <p class="hero__sub" data-fuer="schueler" hidden>Wenn online gerade etwas schiefläuft: Hier findest du schnelle Hilfe, Spiele zum Fake-Erkennen und Leute, die zuhören.</p>
+    <p class="hero__sub" data-fuer="eltern" hidden>Dein Kind wird online gemobbt – oder du willst vorbeugen? Hier gibt es ruhige Schritte, Gesprächshilfen und das kostenlose Elterntelefon.</p>
+    <p class="hero__sub" data-fuer="lehrkraefte" hidden>Fertige Einheiten von 15 bis 180 Minuten – mit Ablaufplan, Lernzielen und Kopiervorlagen. Filtern, öffnen, unterrichten.</p>
+    <p class="hero__sub" data-fuer="fachkraefte" hidden>Leitfäden für Beratung und Prävention, Workshops für Jugendgruppen und belegte Hinweise zu Rechtslage und Netzwerkpartnern.</p>
+
+    <p class="hero__hint" id="rollen-hinweis">Wer bist du?<small>Wähle aus. Die Seite zeigt dir dann passende Inhalte – kostenlos und ohne Anmeldung.</small></p>
+    <div class="hero__roles" role="group" aria-labelledby="rollen-hinweis" data-role-target>
+      {{ROLLENKARTEN}}
+      <p class="role-hint" data-role-live aria-live="polite"></p>
+    </div>
+    <div class="hero__cta">
+      {{CTA_MATERIALIEN}}
+    </div>
+  </div>
+</section>
+
+{{SCHUELER_ZUERST:start}}
+
+<section class="akut-band" aria-labelledby="akut-band-title">
+  <div class="wrap akut-band__inner">
+    <div>
+      <h2 id="akut-band-title">Gerade passiert etwas?</h2>
+      <p>Zwei Fragen – dann weißt du, was du jetzt tun kannst und wer dir hilft. Anonym, nichts wird gespeichert.</p>
+    </div>
+    <div class="akut-band__actions">
+      <a class="btn btn--amber btn--lg" href="hilfe.html#navigator" data-akut>{{ICON:life}} Erste-Hilfe-Navigator</a>
+      <a class="btn btn--light btn--lg" href="tel:116111">{{ICON:phone}} <span><span class="sr-only">Nummer gegen Kummer: </span>116 111</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="themen-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="themen-title">Die drei Themen</h2>
+      <a class="link-arrow" href="wissen.html">Wissen &amp; Glossar {{ICON:arrow}}</a>
+    </div>
+    <div class="grid-3">
+      <article class="topic-card topic-card--foto">
+        {{FOTO:cybermobbing}}
+        <h3>Cybermobbing</h3>
+        <p>Wenn Beleidigungen, peinliche Fotos oder Ausgrenzung im Klassenchat nicht mehr aufhören. Erkennen, stoppen, helfen.</p>
+        <p class="topic-card__links"><a class="link-arrow" href="wissen-cybermobbing.html">Verstehen {{ICON:arrow}}</a><a class="link-arrow" href="materialien.html?thema=cybermobbing">Material</a></p>
+      </article>
+      <article class="topic-card topic-card--foto">
+        {{FOTO:hass}}
+        <h3>Hass &amp; Beleidigung im Netz</h3>
+        <p>Hassrede trifft Einzelne und ganze Gruppen. Wie man Hate Speech erkennt, wo sie strafbar wird und wie Gegenrede gelingt.</p>
+        <p class="topic-card__links"><a class="link-arrow" href="wissen-hass.html">Verstehen {{ICON:arrow}}</a><a class="link-arrow" href="materialien.html?thema=hass">Material</a></p>
+      </article>
+      <article class="topic-card topic-card--foto">
+        {{FOTO:fakenews}}
+        <h3>Fake News &amp; Desinformation</h3>
+        <p>Gefälschte Bilder, Deepfakes, Kettenbriefe: Werkzeuge, um Quellen zu prüfen und Manipulation früh zu durchschauen.</p>
+        <p class="topic-card__links"><a class="link-arrow" href="wissen-fakenews.html">Verstehen {{ICON:arrow}}</a><a class="link-arrow" href="materialien.html?thema=fakenews">Material</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white" id="fuer-dich" aria-label="Material für dich">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-fuer="alle">Direkt einsetzbar</h2>
+      <h2 data-fuer="schueler" hidden>Material für dich</h2>
+      <h2 data-fuer="eltern" hidden>Material für Eltern</h2>
+      <h2 data-fuer="lehrkraefte" hidden>Material für deinen Unterricht</h2>
+      <h2 data-fuer="fachkraefte" hidden>Material für Beratung und Prävention</h2>
+      <a class="btn btn--ghost" href="materialien.html">Alle {{ANZAHL_MATERIAL}} Materialien {{ICON:arrow}}</a>
+    </div>
+    <div class="cards">
+      {{STARTSEITE_KARTEN}}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="schritte-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="schritte-title">Vier Schritte, wenn es online wehtut</h2>
+      <a class="link-arrow" href="hilfe.html">Ausführlich auf der Hilfe-Seite {{ICON:arrow}}</a>
+    </div>
+    <ol class="steps">
+      <li><h3>Ruhe bewahren</h3><p>Nicht antworten und nicht zurückschlagen. Antworten stacheln Täter:innen oft weiter an – und du musst dich nicht rechtfertigen.</p></li>
+      <li><h3>Beweise sichern</h3><p>Screenshots mit Datum, Uhrzeit, Absender und Bezugs-Post machen, Links notieren. Erst sichern, dann melden oder löschen.</p></li>
+      <li><h3>Melden &amp; blockieren</h3><p>Über die Meldefunktion der Plattform melden und die Person blockieren, damit ihre Nachrichten nicht mehr ankommen.</p></li>
+      <li><h3>Darüber reden</h3><p>Einer Vertrauensperson erzählen – Eltern, Freund:innen, Lehrkraft – oder anonym bei der Nummer gegen Kummer anrufen.</p></li>
+    </ol>
+    <p class="source" style="margin-top:1rem">Zusammengefasst nach Empfehlungen von <a href="https://www.juuuport.de/infos/ratgeber/cybermobbing" rel="noopener">JUUUPORT</a>, <a href="https://www.klicksafe.de/cybermobbing" rel="noopener">klicksafe</a>, <a href="https://hateaid.org/rechtssichere-screenshots/" rel="noopener">HateAid</a> und <a href="https://www.handysektor.de/artikel/tipps-gegen-cybermobbing/" rel="noopener">Handysektor</a>.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0" aria-label="Spiel und Hilfe">
+  <div class="wrap grid-2">
+    <div class="feature feature--sky">
+      <div>
+        <span class="tag">{{ICON:game}} Spiel</span>
+        <h3>Fake Detektiv</h3>
+        <p style="margin-top:.5rem;max-width:28rem">Sechs Runden, je vier Meldungen – eine ist erfunden. Allein oder im Team: Findest du die Falschnachricht, und erkennst du, woran?</p>
+      </div>
+      <p><a class="btn btn--amber btn--lg" href="spiele.html">Spiel starten {{ICON:arrow}}</a></p>
+    </div>
+    <div class="feature feature--white">
+      <div>
+        <span class="tag">{{ICON:phone}} Hilfe</span>
+        <h3>Du musst da nicht allein durch</h3>
+        <div style="margin-top:1rem">{{NUMMERN_KURZ}}</div>
+      </div>
+      <p><a class="link-arrow" href="hilfe.html">Alle Beratungsstellen &amp; Erreichbarkeiten {{ICON:arrow}}</a></p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+<!--
+titel: Meine Merkliste
+beschreibung: Deine gemerkten Materialien – gespeichert nur in deinem Browser, ohne Konto.
+nav: sammlung
+-->
+<div class="page-head">
+  <div class="wrap wrap--wide">
+        <h1>Merkliste</h1>
+    <p class="lead">Deine Merkliste wird nur in diesem Browser gespeichert – ohne Konto, ohne Server. Auf einem anderen Gerät ist sie leer.</p>
+  </div>
+</div>
+<section class="section">
+  <div class="wrap wrap--wide">
+    <noscript><div class="empty"><h2>Die Merkliste braucht JavaScript</h2><p>Alle Materialien findest du auch ohne JavaScript in der <a href="materialien.html">Materialbibliothek</a>.</p></div></noscript>
+    <div class="sammlung-bar" data-collection-bar hidden>
+      <p data-collection-count></p>
+      <button type="button" class="text-btn" data-collection-clear>Alle entfernen</button>
+    </div>
+    <div class="cards" data-collection>
+{{ALLE_KARTEN}}
+    </div>
+    <div class="empty" data-collection-empty hidden>
+      <h2 tabindex="-1" data-collection-empty-title>Noch nichts gemerkt</h2>
+      <p>Tippe bei einem Material auf das Lesezeichen, um es hier zu sammeln.</p>
+      <p style="margin-top:1.5rem"><a class="btn btn--ink" href="materialien.html">Material finden</a></p>
+    </div>
+  </div>
+</section>
